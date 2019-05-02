@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  Control.swift
 //  Navigation
 //
 //  Created by CSalac6 on 2/05/19.
@@ -8,21 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
- 
+class Control: UIViewController {
     
+    @IBOutlet weak var lblTitle: UILabel!
+    var text:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    lblTitle.text = text
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "mySegue"{
-            let vc = segue.destination as! Control
-            vc.text = "Hello wolrd";
-        }
-    }
-
-
+   
 }
-
